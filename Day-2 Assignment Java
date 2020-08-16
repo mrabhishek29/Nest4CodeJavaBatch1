@@ -1,0 +1,28 @@
+ class Converter
+	{
+	    static float heightConverter(int heightFeetPart,int heightInchPart)
+	    {
+		double inch=2.54;
+		int value=12;
+		double heightinch=heightInchPart*inch;
+	   	int feet=heightFeetPart*value;
+	    	double new_feet=feet*inch;
+		double res=new_feet+heightinch;
+		float result=(float)res;
+		return result;
+	     }
+	    static float weightConverter(int weight)
+	    {
+	    	double pound=2.2;
+		double new_weight=weight*pound;
+		float new_value=(float)new_weight;
+		return new_value;
+	    }
+	   public static void main(String[] args)
+	{
+	    float height=Converter.heightConverter(5,0);
+	    float weight=Converter.weightConverter(101);
+	    System.out.println("Height in cm: "+height);
+	    System.out.println("Weight in pounds: "+weight);
+	}
+     }
