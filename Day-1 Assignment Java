@@ -1,0 +1,21 @@
+import java.util.*;
+public class Restaurant_Bills
+{
+	public static void main(String[] args)
+	{
+	    double sum,count_tax;
+	    Scanner sc=new Scanner(System.in);
+	    System.out.print("Price 1: ");
+        double price1=sc.nextDouble();
+        System.out.print("Price 2: ");
+        double price2=sc.nextDouble();
+        System.out.print("Price 3: ");
+        double price3=sc.nextDouble();
+        System.out.print("Tax%: "); 
+        double tax=sc.nextDouble();
+        sum=price1+price2+price3;
+        count_tax=tax/100*sum;
+        double result=sum+count_tax;
+        System.out.print("Final Amount: "+result);
+	}
+}
