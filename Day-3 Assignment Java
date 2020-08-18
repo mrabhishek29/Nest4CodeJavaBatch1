@@ -1,0 +1,18 @@
+import java.util.*;
+public class Printing_mistakes
+{
+	public static void main(String[] args)
+	{
+	    Scanner sc=new Scanner(System.in);
+	    String s1=sc.nextLine();
+	    String s2=sc.nextLine();
+	   String str1_first_two_char =s1.substring(0,2);
+	   String str1_last_two_char=s1.substring(s1.length()-2);
+	   String str2_first_two_char =s2.substring(0,2);
+	   String str2_last_two_char=s2.substring(s2.length()-2);
+	    String str1_middle=s1.substring(2,s1.length()-2);
+	    String str2_middle=s2.substring(2,s2.length()-2);
+	    System.out.println(str2_last_two_char+str1_middle+str2_first_two_char);
+	    System.out.println(str1_last_two_char+str2_middle+str1_first_two_char);
+	}
+}
