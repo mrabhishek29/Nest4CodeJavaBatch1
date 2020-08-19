@@ -1,0 +1,22 @@
+import java.util.*;
+public class Count_odd_even
+{
+	public static void main(String[] args)
+	{
+	    int odd=0,even=0;
+	    Scanner sc=new Scanner(System.in);
+	    System.out.print("Number: ");
+	    long number=sc.nextLong();
+	    while(number<0 || number>0)
+	    {
+	        long rem=number%10;
+	        if(rem%2==0)
+	        even++;
+	        else
+	        odd++;
+	        number=number/10;
+	    }
+	  System.out.println("Odd Digit: "+odd);
+	  System.out.println("Even Digit: "+even);
+	}
+}
