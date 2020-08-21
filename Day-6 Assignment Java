@@ -1,0 +1,36 @@
+class Switch
+{
+int mac_address;
+int speed;
+int size;
+int price;
+String name;
+Switch()
+{
+mac_address=011230;
+speed=10;
+size=5;
+price=2000;
+name="Magnetic";
+}
+public void prevent()
+{
+System.out.println("Preventing from failure");
+}
+public void forward()
+{
+System.out.println("Forwarding Network Traffic");
+}
+public void reading()
+{
+System.out.println("Reading MAC Address");
+}
+
+public static void main(String[] args)
+{
+Switch swiobj=new Switch();
+swiobj.prevent();
+swiobj.forward();
+swiobj.reading();
+}
+}
