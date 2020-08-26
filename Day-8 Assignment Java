@@ -1,0 +1,102 @@
+public abstract class Bird
+{
+String name;
+String color;
+int weight;
+int height;
+public void eat(String item)
+{
+System.out.println("Bird is eating");
+}
+public void chirp()
+{
+System.out.println("Birds are chirping");
+}
+public void talk()
+{
+System.out.println("Some Birds can talk");
+}
+abstract void walk();
+abstract void roar();
+interface flyBehaviour
+{
+void fly();
+}
+interface swimBehaviour
+{
+void swim();
+}
+}
+class Parrot extends Bird implements flyBehaviour
+{
+public void fly()
+{
+System.out.println("Parrots can fly");
+}
+public void eat()
+{
+System.out.println("Parrot is eating");
+}
+public void walk()
+{
+System.out.println("Parrots can walk");
+}
+public void roar()
+{
+System.out.println("Parrots can roar");
+}
+}
+class Ostrich extends Bird
+{
+void jump()
+{
+System.out.println("Ostrich can jump");
+}
+public void walk()
+{
+System.out.println("Ostrich can walk");
+}
+public void roar()
+{
+System.out.println("Ostrich can not roar");
+}
+void eat()
+{
+System.out.println("Ostrich is eating food");
+}
+}
+class Penguin extends Bird implements swimBehaviour
+{
+public void swim()
+{
+System.out.println("Penguin can swim");
+}
+public void eat()
+{
+System.out.println("Penguin is eating");
+}
+public void walk()
+{
+System.out.println("Penguin can walk");
+}
+public void roar()
+{
+System.out.println("Penguin can not roar");
+}
+}
+class ConstructBirds
+{
+public static void main(String[] args)
+{
+Bird birdobj=new Parrot();
+Bird birdobj2=new Penguin();
+birdobj.eat("insects");
+birdobj.walk();
+birdobj.roar();
+birdobj.eat("Insects");
+birdobj2.eat("Feed");
+birdobj2.walk();
+birdobj2.roar();
+birdobj2.eat("Insects");
+}
+}
